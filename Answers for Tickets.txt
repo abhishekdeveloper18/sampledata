@@ -1,0 +1,122 @@
+Upstart : Guided user to go to Upstart and taken the details of the owner who approves the Upstart Role and user mail them
+
+Upstart : Guided user to raise upstart role to access data bricks workspace as a AIaaS - Data User
+
+Libraries : Opened Databricks workspace, Selected the given Cluster and in Libraries Section, Added new required Libraries
+
+Adding Service Principle : Opened Databricks workspace, Selected the notebook and run Curl command giving Service priciple details.
+
+Job Cluster : Opened Databricks workspace and Selected workflows, Selected Create Job and added required details and create a job cluster 
+
+Whitelisting : Opened Bastion portal, and Selected Binary allow option and  whitelisted the mentioned FQDNs and provided the source port number to user and added FQDN and databricks IP into private DNS Zone
+
+Private Endpoint : Selected 'Private Endpoints' in Azure Portal, Seleceted '+Create' Option and Given Subscription Id and Resource Group and Given new private end point name and other network details, Created New Private End point and Added private DNS Zone with FQDN and private IP
+
+Blackbird : Provided user with Blackbird URL, to create a Cluster. https://blackbird.web.att.com/#/sandboxList
+
+Upstart Repair : Opened Upstart and Selected the required role of the user and clicked on 'Repair' option. After that user was able to access the Databricks. 
+
+Secrets : Opened Azure portal, Selected ' Key vault' and created 'Secrets' and shared with the user.
+
+Init Scripts : Opened Databricks workspace, Selecvted 'Compute' option, Selected the user cluster, Clicked on 'Advance options., Clicked 'Edit' button and added Init scripts 
+
+Cluster Creation : Opened Databricks workspace and Selected Compute, Selected Create Compute, added  '  connect-2-ext-ms-and-set-proxy' in policy field and added required details and created a  cluster
+
+DEEP : Sent a mail to DEEP team and described the user issue, then they provided solution through mail
+
+Approved PE : Opened Balckbird Application, clicked on private endpoints, selected pending connections and approved PE.
+
+Increase cluster : Opened Databricks workspace, Selected cluster, Clicked edit option, and increased the  capacity of the cluster 
+
+Job Schedule : Opened Databricks workspace and Selected the Job, in Schedule section updated according to user requirement
+
+Service principle as a JOB : Opened Databricks workspace, go to workflows , Select the Job, In 'Job Details' section edit ' Run As' and changed owner as Service principle.
+
+Container level access :  Opened Azure portal, Selected storage account and provided the container level access to mentioned users.
+
+SQL Analytics Issue : Due to meta store issue, user not able to login, now issue got resolved.
+
+Storage DBFS file issue : To save files/model with greater than 2GB in dbfs, either mount storageaccount and upload it in storage container or use databricks cli.
+
+Cluster Updating : Opened Databricks workspace and Selected compute, Selected cluster, in edit option we changed the configurations as per user requirements.
+
+SQL Warehouse permission : Opened Databricks workspace, Selected SQL Warehouse, Clicked on 'Permissions' tab, given access to User.
+
+Credentials enable pass : Opened Databricks workspace, Opened Cluster in 'Compute' section, Enable credential passthrough for user-level data access was enabled, so user able to connect to ADLSgen2
+
+Spark Config : Opened Databricks workspace, Slecetd 'Compute' option, opened cluster and made changes in Spark configuration
+
+Repo's : Opened Databricks Workspace, Selected 'Repo's' and given permission to the user
+
+Scheduling Job : Opened Databricks workspace, Clicked on ' workflows' and Given the access to the user to change his job run schedule and to do the other changes with his job run
+
+Microsoft : Opened Databricks workspace and investigated Cluster performance then Opened a ticket with Microsoft and Cerebro Cluster restored
+
+Auto-Scaling : Opened Databricks workspace, Selected cluster in 'Compute' section and enabled  Auto scaling  for the user
+
+Access/Manage permissions : Opened Databricks workspace, Selected cluster in 'Compute' section, and given 'can manage' permission to the user.
+
+Forever : Guided user that there is no option in Databricks workspace, as the cluster run forever according to the policy set by Management.
+
+JDBC : Connected with the User and Guided user to add jdbc driver to workspace
+
+SAS Token: To generate a Shared Access Signature (SAS) token, you'll need to follow these steps:
+account_name="mystorageaccount"
+account_key="myaccountkey"
+container_name="mycontainer"
+permissions="rw"
+start_time="2023-10-04T00:00:00Z"
+expiry_time="2023-11-04T00:00:00Z"
+
+AutoML model: To create an AutoML model on Databricks, follow these steps:
+Create a Databricks workspace:
+Launch a Databricks cluster:
+Install MLflow
+Create a new Databricks notebook
+Load your dataset
+Split the data
+Create an AutoML experiment
+Run the AutoML experiment
+Review the experiment results
+Select the best model
+
+Delta Live Table pipeline: Steps to create a Delta Live Table pipeline, you can follow these steps:
+Install required libraries>Set up the data sources>Initialize a Delta table>Define the transformation logic>Write the transformed data>Configure the pipeline>Schedule the pipeline>Monitor the pipeline.
+
+Structured Streaming in a Databricks notebook: follow these steps
+Create a new notebook>Configure the Spark session>Define the input source>Apply transformations>Define the output sink>Start the streaming query>Stop the streaming query.
+
+
+
+
+/Users/vk8153@intl.att.com/property_config
+
+
+
+
+aa0113@intl.att.com
+Retail_Intraday_Forecasting
+
+
+
+model/training_pipeline/Intraday_run_utilities
+
+
+aa0113@intl.att.com/Retail_Intraday_Forecasting/model/training_pipeline/Intraday_run_utilities
+
+
+/Users/vk8153@intl.att.com/Intraday_run_utilities
+
+
+
+
+
+
+h2o token
+pat_ox99edmwz08gm2gaz6cy0y2bggfeeq4qerm4
+
+test-refresh-token
+
+eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhODZiZWE1OC05ZDI2LTQxYmUtODlkMC00OWMzM2Q3M2M3MjgifQ.eyJpYXQiOjE2OTgwODQ3NTEsImp0aSI6ImQ0MzFiZTg5LTg2YWEtNDU5Mi05OGQ5LTFiYmEzMThiZWUyOSIsImlzcyI6Imh0dHBzOi8vYXV0aC5oMm8ud2ViLmF0dC5jb20vYXV0aC9yZWFsbXMvaDJvYWljIiwiYXVkIjoiaHR0cHM6Ly9hdXRoLmgyby53ZWIuYXR0LmNvbS9hdXRoL3JlYWxtcy9oMm9haWMiLCJzdWIiOiJmZjU4M2I4Yy1mMmUxLTQxNmMtOWNmMS00ZjIxOWZmN2Q1YmUiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoiaGFjLXBsYXRmb3JtLXB1YmxpYyIsIm5vbmNlIjoiczJDSy9FYndJdFJOTEJGMlBPcjU0eG91TmVTU1oyYXVUbVc0UXFIZnVyOD0iLCJzZXNzaW9uX3N0YXRlIjoiZGI5Njc5YTgtYzEyZS00YThmLTk0YWYtNzBjYTI1ODUxOGJjIiwic2NvcGUiOiJvcGVuaWQgYWkuaDJvLnN0b3JhZ2UgcHJvZmlsZSBlbWFpbCBhaS5oMm8uZGVwbG95IG9mZmxpbmVfYWNjZXNzIHJlYWQtdG9rZW4ifQ.UdR88TGvKNnckA7sx4ByUsfrdKv5K0X5vb_aBuwmSPc
+
+
